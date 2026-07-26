@@ -15,7 +15,7 @@ For any questions or issues please contact the owner of this repository.
 
 ## Repository Structure
 - Python code exists in the directory `code`
-- Figures that are genreated from `code` are created in `figures`
+- Figures that are generated from `code` are created in `figures` (make sure this exists).
 - Saved data from simulations is stored in `data`
 
 ## Python Virtual Environmnet
