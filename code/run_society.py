@@ -58,6 +58,7 @@ def run_mixed_society_trials(
     mu=np.zeros(4),
     sigma=np.ones(4) * np.sqrt(2),
     x0=np.ones(4),
+    redistribution_contract=1,
     fraction_alts=0.5,
     trials=1000,
     T=1000,
@@ -79,6 +80,8 @@ def run_mixed_society_trials(
         (optional, [sqrt(2),sqrt(2),sqrt(2),sqrt(2)]) array of volatility
     x0 : np.ndarray
         (optional, [1,1,1,1]) array of initial wealth values
+    redistribution_contract : int
+        (optional, 1) 1, 2, or 3 designating different social contracts
     fraction_alts : float
         (optional, 0.5) fraction of altruists in society
     trials : int
@@ -142,7 +145,7 @@ def run_mixed_society_trials(
             mu=mu,
             sigma=sigma,
             dt=dt,
-            redistribution_contract=1,
+            redistribution_contract=redistribution_contract,
         )
 
         # compute gini coefficients
