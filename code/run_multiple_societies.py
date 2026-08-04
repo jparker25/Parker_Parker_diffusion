@@ -101,8 +101,8 @@ societies = list(product(num_agent_values, frac_alt_values, [1, 2, 3]))
 
 for n, frac, contract in tqdm(societies, desc="Running societies..."):
     ss.run_mixed_society_trials(
-        N=n,
-        redistribution_contract=contract,
+        N=int(n),
+        redistribution_contract=int(contract),
         fraction_alts=frac,
         trials=args.trials,
         T=args.time,
