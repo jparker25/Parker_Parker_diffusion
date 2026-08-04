@@ -8,17 +8,11 @@ Authors: John E. Parker (2026)
 
 # python libraries
 import numpy as np
-from matplotlib import pyplot as plt
-import matplotlib.cm as cm
 import json
-import sys
 
 # user modules
 from run_diffusion import *
 from helpers import *
-
-# figure directory
-fig_dir = "../figures"
 
 
 def determine_gini_coefficient(wealth):
@@ -113,7 +107,6 @@ def run_mixed_society_trials(
 
     # set up time for simulation
     n_steps = int(T // dt)
-    time = np.arange(n_steps) * dt
 
     # mixed society ideologies
     ideologies = ["altruist"] * int(fraction_alts * N) + ["individualist"] * (
